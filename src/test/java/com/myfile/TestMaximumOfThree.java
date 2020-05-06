@@ -40,6 +40,13 @@ import org.junit.Test;
             float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,450.67f,100.00f);
             Assert.assertEquals(java.util.Optional.of((Float)450.67f), java.util.Optional.of(checkFloat));
         }
+        @Test
+        public void givenThreeInput_maxFloatAtThirdPosition_shouldReturnMaximumFloatNumber()
+        {
+            objectOfMaximumOfThree = new MaximumOfThree();
+            float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,45.67f,1000.00f);
+            Assert.assertEquals(java.util.Optional.of((Float)1000.00f), java.util.Optional.of(checkFloat));
+        }
     }
 
 
