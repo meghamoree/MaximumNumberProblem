@@ -9,6 +9,15 @@ package com.myfile;
 
             return maxOfThree;
         }
-    }
 
+        public Float findMaxFloat(Float firstFloat, Float secondFloat, Float thirdFloat){
+            if(firstFloat > secondFloat && firstFloat > thirdFloat){
+                return firstFloat;
+            }else if (secondFloat > firstFloat && secondFloat > thirdFloat){
+                return secondFloat;
+            }else {
+                return thirdFloat;
+            }
+        }
+    }
 

@@ -26,7 +26,7 @@ import org.junit.Test;
             int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(112,450,870);
             Assert.assertEquals(870,checkMaxInteger);
         }
-        
+
     }
 
 
