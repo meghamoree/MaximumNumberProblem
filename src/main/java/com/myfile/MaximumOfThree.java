@@ -19,5 +19,14 @@ package com.myfile;
                 return thirdFloat;
             }
         }
+        public String findMaxString(String firstString , String secondString, String thirdString){
+            if(firstString.length() > secondString.length() && firstString.length() > thirdString.length()){
+                return firstString;
+            }else if(secondString.length() > firstString.length() && secondString.length() > thirdString.length()){
+                return secondString;
+            }else{
+                return thirdString;
+            }
+        }
     }
 
