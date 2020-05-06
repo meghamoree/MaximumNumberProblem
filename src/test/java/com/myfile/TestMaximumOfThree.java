@@ -26,7 +26,13 @@ import org.junit.Test;
             int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(112,450,870);
             Assert.assertEquals(870,checkMaxInteger);
         }
-
+        @Test
+        public void givenThreeInput_MaxFloatAtFirstPosition_shouldReturnMaximumFloatNumber()
+        {
+            objectOfMaximumOfThree = new MaximumOfThree();
+            float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,45.67f,100.00f);
+            Assert.assertEquals(java.util.Optional.of((Float)120.45f), java.util.Optional.of(checkFloat));
+        }
     }
 
 
