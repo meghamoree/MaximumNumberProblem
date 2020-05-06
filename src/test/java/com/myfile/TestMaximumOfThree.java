@@ -61,6 +61,13 @@ import org.junit.Test;
             String checkString = objectOfMaximumOfThree.findMaxString("Apples","BananaIceCream","Guava");
             Assert.assertEquals("BananaIceCream",checkString);
         }
+        @Test
+        public void givenThreeInput_maxStringAtThirdPosition_shouldReturnMaximumString()
+        {
+            objectOfMaximumOfThree = new MaximumOfThree();
+            String checkString = objectOfMaximumOfThree.findMaxString("Apples","Banana","GuavaMilkShake");
+            Assert.assertEquals("GuavaMilkShake",checkString);
+        }
     }
 
 
