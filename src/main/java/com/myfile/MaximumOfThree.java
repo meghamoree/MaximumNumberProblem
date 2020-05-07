@@ -3,6 +3,10 @@ package com.myfile;
         E firstInput;
         E secondInput;
         E thirdInput;
+        //Default Constructor
+        public MaximumOfThree(){
+
+        }
         //Generic function that accepts all the data types
             public <E extends Comparable > E findMaximum(E firstInput, E secondInput, E thirdInput) {
                 //<< >> != operators does not work in generics thus using .compare
