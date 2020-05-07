@@ -8,75 +8,65 @@ import org.junit.Test;
         @Test
         public void givenThreeInput_maxIntegerAtFirstPosition_shouldReturnMaximum()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(5,3,1);
-            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum(5,3,1);
-            Assert.assertEquals(5,checkMaxInteger);
+            objectOfMaximumOfThree = new MaximumOfThree(5,3,1);
+            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.firstInput,checkMaxInteger);
         }
         @Test
         public void givenThreeInput_MaxIntegerAtSecondPosition_shouldReturnMaximum()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(65,110,87);
-            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum(65,110,87);
-            Assert.assertEquals(110,checkMaxInteger);
+            objectOfMaximumOfThree = new MaximumOfThree(65,110,87);
+            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.secondInput,checkMaxInteger);
         }
         @Test
         public void givenThreeInput_MaxIntegerAtThirdPosition_shouldReturnMaximum()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(112,450,870);
-            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum(112,450,870);
-
-            Assert.assertEquals(870,checkMaxInteger);
+            objectOfMaximumOfThree = new MaximumOfThree(112,450,870);
+            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.thirdInput,checkMaxInteger);
         }
         @Test
         public void givenThreeInput_MaxFloatAtFirstPosition_shouldReturnMaximumFloatNumber()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,45.67f,100.00f);
-            float checkFloat = (float) objectOfMaximumOfThree.findMaximum(120.45f,45.67f,100.00f);
-            Assert.assertEquals(java.util.Optional.of((Float)120.45f), java.util.Optional.of(checkFloat));
+            objectOfMaximumOfThree = new MaximumOfThree(120.45f,45.67f,100.00f);
+            float checkFloat = (float) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.firstInput, checkFloat);
         }
         @Test
         public void givenThreeInput_maxFloatAtSecondPosition_shouldReturnMaximumFloatNumber()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,450.67f,100.00f);
-            float checkFloat = (float) objectOfMaximumOfThree.findMaximum(120.45f,450.67f,100.00f);
-            Assert.assertEquals(java.util.Optional.of((Float)450.67f), java.util.Optional.of(checkFloat));
+            objectOfMaximumOfThree = new MaximumOfThree(120.45f,450.67f,100.00f);
+            float checkFloat = (float) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.secondInput, checkFloat);
         }
         @Test
         public void givenThreeInput_maxFloatAtThirdPosition_shouldReturnMaximumFloatNumber()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,45.67f,1000.00f);
-            float checkFloat = (float) objectOfMaximumOfThree.findMaximum(120.45f,45.67f,1000.00f);
-            Assert.assertEquals(java.util.Optional.of((Float)1000.00f), java.util.Optional.of(checkFloat));
+            objectOfMaximumOfThree = new MaximumOfThree(120.45f,45.67f,1000.00f);
+            float checkFloat = (float) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.thirdInput, checkFloat);
         }
         @Test
         public void givenThreeInput_maxStringAtFirstPosition_shouldReturnMaximumString()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            String checkString = objectOfMaximumOfThree.findMaxString("Appples","Banana","Guava");
-            String checkString = (String) objectOfMaximumOfThree.findMaximum("Appples","Banana","Guava");
-            Assert.assertEquals("Appples",checkString);
+            objectOfMaximumOfThree = new MaximumOfThree("Peaches","Apple","Banana");
+            String checkString = (String) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.firstInput,checkString);
         }
         @Test
         public void givenThreeInput_maxStringAtSecondPosition_shouldReturnMaximumString()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            String checkString = objectOfMaximumOfThree.findMaxString("Apples","BananaIceCream","Guava");
-            String checkString = (String) objectOfMaximumOfThree.findMaximum("Appples","Banana","Guava");
-            Assert.assertEquals("BananaIceCream",checkString);
+            objectOfMaximumOfThree = new MaximumOfThree("Apples","Peaches","Banana");
+            String checkString = (String) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.secondInput,checkString);
         }
         @Test
         public void givenThreeInput_maxStringAtThirdPosition_shouldReturnMaximumString()
         {
-            objectOfMaximumOfThree = new MaximumOfThree();
-            String checkString = objectOfMaximumOfThree.findMaxString("Apples","Banana","GuavaMilkShake");
-            String checkString = (String) objectOfMaximumOfThree.findMaximum("Apples","Banana","GuavaMilkShake");
-            Assert.assertEquals("GuavaMilkShake",checkString);
+            objectOfMaximumOfThree = new MaximumOfThree("Apples","Banana","Peaches");
+            String checkString = (String) objectOfMaximumOfThree.findMaximum();
+            Assert.assertEquals(objectOfMaximumOfThree.thirdInput,checkString);
         }
     }
 
