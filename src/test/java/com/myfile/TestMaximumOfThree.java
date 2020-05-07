@@ -10,6 +10,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(5,3,1);
+            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum(5,3,1);
             Assert.assertEquals(5,checkMaxInteger);
         }
         @Test
@@ -17,6 +18,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(65,110,87);
+            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum(65,110,87);
             Assert.assertEquals(110,checkMaxInteger);
         }
         @Test
@@ -24,6 +26,8 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             int checkMaxInteger = objectOfMaximumOfThree.findMaxInteger(112,450,870);
+            int checkMaxInteger = (int) objectOfMaximumOfThree.findMaximum(112,450,870);
+
             Assert.assertEquals(870,checkMaxInteger);
         }
         @Test
@@ -31,6 +35,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,45.67f,100.00f);
+            float checkFloat = (float) objectOfMaximumOfThree.findMaximum(120.45f,45.67f,100.00f);
             Assert.assertEquals(java.util.Optional.of((Float)120.45f), java.util.Optional.of(checkFloat));
         }
         @Test
@@ -38,6 +43,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,450.67f,100.00f);
+            float checkFloat = (float) objectOfMaximumOfThree.findMaximum(120.45f,450.67f,100.00f);
             Assert.assertEquals(java.util.Optional.of((Float)450.67f), java.util.Optional.of(checkFloat));
         }
         @Test
@@ -45,6 +51,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             float checkFloat = objectOfMaximumOfThree.findMaxFloat(120.45f,45.67f,1000.00f);
+            float checkFloat = (float) objectOfMaximumOfThree.findMaximum(120.45f,45.67f,1000.00f);
             Assert.assertEquals(java.util.Optional.of((Float)1000.00f), java.util.Optional.of(checkFloat));
         }
         @Test
@@ -52,6 +59,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             String checkString = objectOfMaximumOfThree.findMaxString("Appples","Banana","Guava");
+            String checkString = (String) objectOfMaximumOfThree.findMaximum("Appples","Banana","Guava");
             Assert.assertEquals("Appples",checkString);
         }
         @Test
@@ -59,6 +67,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             String checkString = objectOfMaximumOfThree.findMaxString("Apples","BananaIceCream","Guava");
+            String checkString = (String) objectOfMaximumOfThree.findMaximum("Appples","Banana","Guava");
             Assert.assertEquals("BananaIceCream",checkString);
         }
         @Test
@@ -66,6 +75,7 @@ import org.junit.Test;
         {
             objectOfMaximumOfThree = new MaximumOfThree();
             String checkString = objectOfMaximumOfThree.findMaxString("Apples","Banana","GuavaMilkShake");
+            String checkString = (String) objectOfMaximumOfThree.findMaximum("Apples","Banana","GuavaMilkShake");
             Assert.assertEquals("GuavaMilkShake",checkString);
         }
     }
